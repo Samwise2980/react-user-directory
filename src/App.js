@@ -11,7 +11,7 @@ import Search from "./pages/Search";
 
 
 const App = () => {
-  document.title = "Wikipedia Searcher";
+  document.title = "User Directory";
   return (
     <Router>
       <div>
