@@ -3,27 +3,13 @@ import "./style.css";
 
 function Card(props) {
   return (
-    <div className="card">
-      <div className="img-container">
-        <img alt={props.first} src={props.picture} />
-      </div>
-      <div className="content">
-        <ul>
-          <li>
-            <strong>Name:</strong> {props.first} {props.last}
-          </li>
-          <li>
-            <strong>Username:</strong> {props.username}
-          </li>
-          <li>
-            <strong>Email:</strong> {props.email}
-          </li>
-          <li>
-            <strong>Email:</strong> {props.email}
-          </li>
-        </ul>
-      </div>
-    </div>
+    <tr className="text-center">
+      <th scope="row"><img alt={props.first} src={props.picture}/></th>
+      <td>{props.first} {props.last}</td>
+      <td>{props.phone}</td>
+      <td>{props.email}</td>
+      <td>{props.dob}</td>
+    </tr>
   );
 }
 

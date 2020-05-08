@@ -3,12 +3,20 @@ import "./style.css";
 
 function SearchResults(props) {
   return (
-    <ul className="list-group search-results">
-      <li className="list-group-item">
-        <h2>{props.title}</h2>
-      </li>
-    </ul>
-  );
+<table class="table">
+  <thead>
+    <tr className="text-center">
+      <th scope="col">Image</th>
+      <th scope="col"><button>Name</button></th>
+      <th scope="col"><button>Phone</button></th>
+      <th scope="col"><button>Email</button></th>
+      <th scope="col"><button>DOB</button></th>
+    </tr>
+  </thead>
+  <tbody>
+    {props.children}
+  </tbody>
+</table>  );
 }
 
 export default SearchResults;
