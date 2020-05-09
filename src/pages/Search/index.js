@@ -44,7 +44,7 @@ function Search() {
     setUser(sortedUsers);
   };
 
-
+  // Handles input Change
   const handleInputChange = (event) => setSearch(event.target.value);
 
   return (
