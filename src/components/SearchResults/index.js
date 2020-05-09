@@ -3,20 +3,35 @@ import "./style.css";
 
 function SearchResults(props) {
   return (
-<table class="table">
-  <thead>
-    <tr className="text-center">
-      <th scope="col">Image</th>
-      <th scope="col"><button>Name</button></th>
-      <th scope="col"><button>Phone</button></th>
-      <th scope="col"><button>Email</button></th>
-      <th scope="col"><button>DOB</button></th>
-    </tr>
-  </thead>
-  <tbody>
-    {props.children}
-  </tbody>
-</table>  );
+    <table className="table">
+      <thead>
+        <tr className="text-center">
+          <th scope="col">Image</th>
+          <th scope="col">
+            Name{" "}
+            <button onClick={() => props.sortCharacters("ascending", "name")}>Up</button>
+            <button onClick={() => props.sortCharacters("descending", "name")}>Down</button>
+          </th>
+          <th scope="col">
+            Phone{" "}
+            <button onClick={() => props.sortCharacters("ascending", "phone")}>Up</button>
+            <button onClick={() => props.sortCharacters("descending", "phone")}>Down</button>
+          </th>
+          <th scope="col">
+            Email{" "}
+            <button onClick={() => props.sortCharacters("ascending", "email")}>Up</button>
+            <button onClick={() => props.sortCharacters("descending", "email")}>Down</button>
+          </th>
+          <th scope="col">
+            DOB{" "}
+            <button onClick={() => props.sortCharacters("ascending", "date")}>Up</button>
+            <button onClick={() => props.sortCharacters("descending", "date")}>Down</button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>{props.children}</tbody>
+    </table>
+  );
 }
 
 export default SearchResults;
